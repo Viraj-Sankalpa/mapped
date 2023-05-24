@@ -8,7 +8,7 @@ class MapView extends StatefulWidget {
 
 class _MapViewState extends State<MapView> {
   late GoogleMapController _controller;
-  late LatLng _selectedLocation;
+  LatLng? _selectedLocation; // Make _selectedLocation nullable
 
   void _onMapCreated(GoogleMapController controller) {
     _controller = controller;
@@ -37,7 +37,7 @@ class _MapViewState extends State<MapView> {
             ? {
                 Marker(
                   markerId: MarkerId('selected-location'),
-                  position: _selectedLocation,
+                  position: _selectedLocation!,
                 ),
               }
             : {},
