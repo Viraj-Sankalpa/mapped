@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mapped/map.dart';
+import 'package:mapped/map_view.dart';
+
 
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mapped',
-      home: MapScreen(),
+      home: MapView(),
     );
   }
 }
